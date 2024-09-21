@@ -1,1 +1,12 @@
- 
+ header {
+    display:flex;   
+ }
+
+ .rechercher {
+    margin-left: 42em;
+    margin-top: 2em;
+ }
+ .rechercher input:nth-child(2){
+    margin-left: 4px;
+
+ }
