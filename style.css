@@ -10,3 +10,36 @@
     margin-left: 4px;
 
  }
+ 
+
+ nav > ul{
+   border-top: 1.5px solid rgba(126, 162, 199, 0.297);
+   border-bottom: 2px solid rgb(73, 136, 198);
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+   padding: 10px;
+   background:linear-gradient(rgb(208, 231, 243), white,rgb(208, 231, 243) );
+   
+ }
+
+ nav > ul > li{
+   border-right: 2px;
+   margin: auto;
+   
+ }
+
+nav a {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color:rgb(73, 136, 198);
+   text-decoration: none;
+}
+
+nav a:hover{
+   text-decoration: underline;
+   color: rgb(0, 170, 255);
+}
+ .sous-menu{
+   display: none;
+ }
+ 
