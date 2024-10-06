@@ -1,5 +1,11 @@
+body{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+ /* HEADER*/
  header {
-    display:flex;   
+    display:flex; 
+    justify-content: space-between;
+    background: linear-gradient(azure,white,azure);
  }
 
  .rechercher {
@@ -10,36 +16,341 @@
     margin-left: 4px;
 
  }
+
+ /* MENU */
+ .menu {
+   background: linear-gradient(azure,white,azure);
+   display: flex;
+   list-style-type: none; /*POUR RETIRER LES PUCES*/
+   margin: 0;
+  
+}
+
+
+/* TITRES PRINCIPAUX DU MENU*/
+.titre-nav {
+   border-right: solid 2px rgb(246, 245, 245);
+   margin: 0;
+   background: linear-gradient(azure,white,azure);
+   width: 400px;
+   position: relative; /* INDISPENSABLE POUR QUE LE SOUS-MENU SE POSITIONNE RELATIVEMENT A LUI*/
+}
+.titre-nav:last-child{
+   border-right: none;
+}
+
+.titre-nav > a {
+   font-family:Verdana, Geneva, Tahoma, sans-serif ;  
+   color:rgb(23, 72, 112);
+   font-weight: 300px;
+   text-align: center;
+   text-decoration: none;
+   padding: 10px;
+   display: block;
+}
+.titre-nav a:hover{
+   text-decoration: underline;
+   color: rgb(0, 170, 255);
+}
+
+/* SOUS-MENU */
+.sous-menu {
+   
+   display: none;/* POUR LE CACHER PAR DEFAUT */
+   position: absolute; /* POUR LE POSITIONNER JUSTE SOUS LE PARENT */
+   width: 310px;
+   left: 0; /* POUR QU'IL COMMENCE TOUT A GAUCHE DU PARENT*/
+   top: 100%; 
+   list-style-type: none;
+   padding: 0;
+   padding-bottom: 15px;
+   background-color: white; 
+}
+
+.situation{
+   display: flex;
+   list-style-type: none;
+   padding: 0;
+}
+
+.situation > li >a, li{
+   text-decoration: none;
+   color :rgb(23, 72, 112);
+}
+
+/* Style des éléments du sous-menu */
+.sous-menu li {
+   width: 305px; 
+   height: 25px;
+}
+
+.sous-menu li:last-child {
+   border-bottom: none; 
+}
+
+/* Affiche le sous-menu au survol */
+.titre-nav:hover .sous-menu {
+   display: block;
+}
+
+
+/* Liens du sous-menu */
+.sous-menu li a {
+   display: block;
+   text-decoration: none;
+   padding: 10px;
+   color: black;
+   background-color: azure;
+}
+
+.sous-menu li a:hover {
+   background-color: #008cff;
+}
+
+/* STYLE POUR LE MAIN */
+main{
+   border-radius: 10px;
+   width:945px;
+
+}
+
+h1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(23, 72, 112);
+  color: white;
+  font-size: small;
+  font-weight: 5px;
+  margin: 0;
+  width: 945px;
+}
+
+.descriptif-h1{
+   margin: 10px 10px;
+   background-color: white;
+   color: rgb(23, 72, 112);
+   font-weight: bold;
+   width:945px
+}
+
+.container-tableau-bord{
+  border-bottom: solid rgb(203, 203, 203);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+   display: flex;
+   width: 940px;
+}
+.container-tableau-bord a{
+   color:rgb(23, 72, 112);
+   font-weight: bold;
+
+}
+
+.container li {
+   color: black;
+   margin: 6px;
+}
+
+article{
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   background-color: azure;
+   width: 320px;
+
+}
+article a{
+   text-decoration: none;
+}
+article li{
+   list-style-type: none;
+}
+.container-tableau-bord  :nth-child(3){
+   width: 350px;
+}
  
 
+/* Style pour le conteneur parent */
+section {
+  
+   display: flex;           /* Utilise Flexbox */
+   justify-content: space-between; /* Espace entre les deux éléments */
+ }
+ 
+ /* Style pour la section principale */
+ main {
+   flex: 3;          /* Main prendra 3 parts de l'espace disponible */
+   padding: 0px;
+  
+ }
+ 
+ /* Style pour la barre latérale */
+ aside {
+   
+   flex: 1;    /* Aside prendra 1 part de l'espace disponible */
+   padding: 0px;
+   
+ }
+ 
+ .astuces{
+   margin-left: 3px;
+   background-color: azure;
+   border-radius: 10px;
+ }
+ h3{
+   color: white;
+   font-size: small;
+   background-color: rgb(23, 72, 112);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   margin-top: 0;
+   padding-bottom: 4px;
+   padding-left: 50px;
+ }
+ .astuces div a {
+   color:rgb(23, 72, 112);
+   font-weight: bold;
+ }
+
+ .astuces div {
+   text-align: right;
+ }
+
+ .astuces>ul,.actualites>ul{
+   padding-left: 0;
+ }
+
+ .actualites h3{
+   background-color: rgb(188, 104, 9);
+  
+ }
+
+ .actualites .date{
+   color:rgb(188, 104, 9) ;
+   font-weight: bold;
+ }
+.actualites div {
+   text-align: right;
+}
+ .actualites div a {
+   color:rgb(188, 104, 9) ;
+   font-weight: bold;
+ }
+ .actualites a,.astuces a{
+   color: black;
+   text-decoration: none;
+ }
+ .actualites li, .astuces li{
+   list-style-type: none;
+ }
+ .actualites li{
+   margin: 7px;
+ }
+
+ .actualites{
+  margin-top: 15px;
+   background-color: azure;
+   border-radius: 10px;
+ }
+
+
+ 
+/* FOOTER */
+ .divers{
+   background-color: #008cff;
+   display: flex;
+   margin-bottom: 0;
+ }
+
+ .divers li{
+   list-style-type: none; ;
+ }
+
+
+ .divers a{
+   text-decoration: none;
+   color: white;
+ }
+
+ .divers li>p{
+   color: white;
+   list-style-type: none;
+ }
+
+ 
+
+
+ .lien {
+   padding-left: 10px;
+ }
+
+ .lien li{
+   list-style-type: disc;
+}
+
+ .copyright{
+   padding:10px;
+   background-color: rgb(14, 56, 125);
+   text-align: center;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+ }
+
+ .copyright a{
+   color:  white;
+   text-decoration: none;
+ }
+
+ article>a{
+   display: flex;
+   align-items: center;
+   margin-left: 10px;
+ }
+
+ article>ul{
+   padding-left: 0 ;
+ }
+/* NAVBAR
  nav > ul{
+   display: flex;
    border-top: 1.5px solid rgba(126, 162, 199, 0.297);
    border-bottom: 2px solid rgb(73, 136, 198);
-   display: flex;
-   flex-direction: row;
+   border: dotted purple;
+   
    list-style-type: none;
    padding: 10px;
    background:linear-gradient(rgb(208, 231, 243), white,rgb(208, 231, 243) );
    
  }
-
+nav a {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color:rgb(73, 136, 198);
+   text-decoration: none;
+   display: block;
+   
+}
  nav > ul > li{
    border-right: 2px;
    margin: auto;
    
  }
 
-nav a {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   color:rgb(73, 136, 198);
-   text-decoration: none;
-}
+
 
 nav a:hover{
    text-decoration: underline;
    color: rgb(0, 170, 255);
 }
- .sous-menu{
-   display: none;
- }
+
+.sous-menu{
+   flex-direction: column;
+   border: solid red;
+}
+.sous-menu li{
+   list-style-type: none;
+}
+
+.titre-nav{
+   border: solid green;
+}
  
+ */
